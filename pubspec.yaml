@@ -1,6 +1,6 @@
 name: fl_dial_code_picker
 description: "A responsive Flutter package for picking country dial codes that automatically adapts to different screen sizes with extensive customization options."
-version: 1.0.0
+version: 0.0.2
 homepage: https://github.com/eijiotieno-official/fl_dial_code_picker
 
 environment:
