@@ -1,4 +1,29 @@
+/// Contains a comprehensive database of countries with their dial codes, flags, and codes.
+///
+/// This class provides static access to a list of all countries supported by the dial code picker.
+/// Each country entry includes the country name, flag emoji, ISO country code, and international dial code.
+///
+/// The database includes over 200 countries and territories, making it suitable for most international applications.
+///
+/// Example:
+/// ```dart
+/// // Access the country data
+/// final countries = CountryDatabase.data;
+///
+/// // Find a specific country
+/// final usData = countries.firstWhere((country) => country['code'] == 'US');
+/// final country = Country.fromMap(usData);
+/// ```
 class CountryDatabase {
+  /// A static list containing all country data as Map objects.
+  ///
+  /// Each map contains the following keys:
+  /// - `name`: The full country name (e.g., "United States")
+  /// - `flag`: The flag emoji (e.g., "🇺🇸")
+  /// - `code`: The ISO 3166-1 alpha-2 country code (e.g., "US")
+  /// - `dial`: The international dial code with plus sign (e.g., "+1")
+  ///
+  /// This data can be used to create [Country] objects using [Country.fromMap].
   static const List data = [
     {"name": "Afghanistan", "flag": "🇦🇫", "code": "AF", "dial": "+93"},
     {"name": "Åland Islands", "flag": "🇦🇽", "code": "AX", "dial": "+358"},
@@ -13,7 +38,7 @@ class CountryDatabase {
       "name": "Antigua and Barbuda",
       "flag": "🇦🇬",
       "code": "AG",
-      "dial": "+1268"
+      "dial": "+1268",
     },
     {"name": "Argentina", "flag": "🇦🇷", "code": "AR", "dial": "+54"},
     {"name": "Armenia", "flag": "🇦🇲", "code": "AM", "dial": "+374"},
@@ -35,13 +60,13 @@ class CountryDatabase {
       "name": "Bolivia, Plurinational State of bolivia",
       "flag": "🇧🇴",
       "code": "BO",
-      "dial": "+591"
+      "dial": "+591",
     },
     {
       "name": "Bosnia and Herzegovina",
       "flag": "🇧🇦",
       "code": "BA",
-      "dial": "+387"
+      "dial": "+387",
     },
     {"name": "Botswana", "flag": "🇧🇼", "code": "BW", "dial": "+267"},
     {"name": "Bouvet Island", "flag": "🇧🇻", "code": "BV", "dial": "+47"},
@@ -50,7 +75,7 @@ class CountryDatabase {
       "name": "British Indian Ocean Territory",
       "flag": "🇮🇴",
       "code": "IO",
-      "dial": "+246"
+      "dial": "+246",
     },
     {"name": "Brunei Darussalam", "flag": "🇧🇳", "code": "BN", "dial": "+673"},
     {"name": "Bulgaria", "flag": "🇧🇬", "code": "BG", "dial": "+359"},
@@ -65,7 +90,7 @@ class CountryDatabase {
       "name": "Central African Republic",
       "flag": "🇨🇫",
       "code": "CF",
-      "dial": "+236"
+      "dial": "+236",
     },
     {"name": "Chad", "flag": "🇹🇩", "code": "TD", "dial": "+235"},
     {"name": "Chile", "flag": "🇨🇱", "code": "CL", "dial": "+56"},
@@ -75,7 +100,7 @@ class CountryDatabase {
       "name": "Cocos (Keeling) Islands",
       "flag": "🇨🇨",
       "code": "CC",
-      "dial": "+61"
+      "dial": "+61",
     },
     {"name": "Colombia", "flag": "🇨🇴", "code": "CO", "dial": "+57"},
     {"name": "Comoros", "flag": "🇰🇲", "code": "KM", "dial": "+269"},
@@ -84,7 +109,7 @@ class CountryDatabase {
       "name": "Congo, The Democratic Republic of the Congo",
       "flag": "🇨🇩",
       "code": "CD",
-      "dial": "+243"
+      "dial": "+243",
     },
     {"name": "Cook Islands", "flag": "🇨🇰", "code": "CK", "dial": "+682"},
     {"name": "Costa Rica", "flag": "🇨🇷", "code": "CR", "dial": "+506"},
@@ -100,7 +125,7 @@ class CountryDatabase {
       "name": "Dominican Republic",
       "flag": "🇩🇴",
       "code": "DO",
-      "dial": "+1849"
+      "dial": "+1849",
     },
     {"name": "Ecuador", "flag": "🇪🇨", "code": "EC", "dial": "+593"},
     {"name": "Egypt", "flag": "🇪🇬", "code": "EG", "dial": "+20"},
@@ -113,7 +138,7 @@ class CountryDatabase {
       "name": "Falkland Islands (Malvinas)",
       "flag": "🇫🇰",
       "code": "FK",
-      "dial": "+500"
+      "dial": "+500",
     },
     {"name": "Faroe Islands", "flag": "🇫🇴", "code": "FO", "dial": "+298"},
     {"name": "Fiji", "flag": "🇫🇯", "code": "FJ", "dial": "+679"},
@@ -125,7 +150,7 @@ class CountryDatabase {
       "name": "French Southern Territories",
       "flag": "🇹🇫",
       "code": "TF",
-      "dial": "+262"
+      "dial": "+262",
     },
     {"name": "Gabon", "flag": "🇬🇦", "code": "GA", "dial": "+241"},
     {"name": "Gambia", "flag": "🇬🇲", "code": "GM", "dial": "+220"},
@@ -148,13 +173,13 @@ class CountryDatabase {
       "name": "Heard Island and Mcdonald Islands",
       "flag": "🇭🇲",
       "code": "HM",
-      "dial": "+672"
+      "dial": "+672",
     },
     {
       "name": "Holy See (Vatican City State)",
       "flag": "🇻🇦",
       "code": "VA",
-      "dial": "+379"
+      "dial": "+379",
     },
     {"name": "Honduras", "flag": "🇭🇳", "code": "HN", "dial": "+504"},
     {"name": "Hong Kong", "flag": "🇭🇰", "code": "HK", "dial": "+852"},
@@ -166,7 +191,7 @@ class CountryDatabase {
       "name": "Iran, Islamic Republic of Persian Gulf",
       "flag": "🇮🇷",
       "code": "IR",
-      "dial": "+98"
+      "dial": "+98",
     },
     {"name": "Iraq", "flag": "🇮🇶", "code": "IQ", "dial": "+964"},
     {"name": "Ireland", "flag": "🇮🇪", "code": "IE", "dial": "+353"},
@@ -184,13 +209,13 @@ class CountryDatabase {
       "name": "Korea, Democratic People's Republic of Korea",
       "flag": "🇰🇵",
       "code": "KP",
-      "dial": "+850"
+      "dial": "+850",
     },
     {
       "name": "Korea, Republic of South Korea",
       "flag": "🇰🇷",
       "code": "KR",
-      "dial": "+82"
+      "dial": "+82",
     },
     {"name": "Kosovo", "flag": "🇽🇰", "code": "XK", "dial": "+383"},
     {"name": "Kuwait", "flag": "🇰🇼", "code": "KW", "dial": "+965"},
@@ -204,7 +229,7 @@ class CountryDatabase {
       "name": "Libyan Arab Jamahiriya",
       "flag": "🇱🇾",
       "code": "LY",
-      "dial": "+218"
+      "dial": "+218",
     },
     {"name": "Liechtenstein", "flag": "🇱🇮", "code": "LI", "dial": "+423"},
     {"name": "Lithuania", "flag": "🇱🇹", "code": "LT", "dial": "+370"},
@@ -227,7 +252,7 @@ class CountryDatabase {
       "name": "Micronesia, Federated States of Micronesia",
       "flag": "🇫🇲",
       "code": "FM",
-      "dial": "+691"
+      "dial": "+691",
     },
     {"name": "Moldova", "flag": "🇲🇩", "code": "MD", "dial": "+373"},
     {"name": "Monaco", "flag": "🇲🇨", "code": "MC", "dial": "+377"},
@@ -253,7 +278,7 @@ class CountryDatabase {
       "name": "Northern Mariana Islands",
       "flag": "🇲🇵",
       "code": "MP",
-      "dial": "+1670"
+      "dial": "+1670",
     },
     {"name": "Norway", "flag": "🇳🇴", "code": "NO", "dial": "+47"},
     {"name": "Oman", "flag": "🇴🇲", "code": "OM", "dial": "+968"},
@@ -263,7 +288,7 @@ class CountryDatabase {
       "name": "Palestinian Territory, Occupied",
       "flag": "🇵🇸",
       "code": "PS",
-      "dial": "+970"
+      "dial": "+970",
     },
     {"name": "Panama", "flag": "🇵🇦", "code": "PA", "dial": "+507"},
     {"name": "Papua New Guinea", "flag": "🇵🇬", "code": "PG", "dial": "+675"},
@@ -284,13 +309,13 @@ class CountryDatabase {
       "name": "Saint Helena, Ascension and Tristan Da Cunha",
       "flag": "🇸🇭",
       "code": "SH",
-      "dial": "+290"
+      "dial": "+290",
     },
     {
       "name": "Saint Kitts and Nevis",
       "flag": "🇰🇳",
       "code": "KN",
-      "dial": "+1869"
+      "dial": "+1869",
     },
     {"name": "Saint Lucia", "flag": "🇱🇨", "code": "LC", "dial": "+1758"},
     {"name": "Saint Martin", "flag": "🇲🇫", "code": "MF", "dial": "+590"},
@@ -298,13 +323,13 @@ class CountryDatabase {
       "name": "Saint Pierre and Miquelon",
       "flag": "🇵🇲",
       "code": "PM",
-      "dial": "+508"
+      "dial": "+508",
     },
     {
       "name": "Saint Vincent and the Grenadines",
       "flag": "🇻🇨",
       "code": "VC",
-      "dial": "+1784"
+      "dial": "+1784",
     },
     {"name": "Samoa", "flag": "🇼🇸", "code": "WS", "dial": "+685"},
     {"name": "San Marino", "flag": "🇸🇲", "code": "SM", "dial": "+378"},
@@ -312,7 +337,7 @@ class CountryDatabase {
       "name": "Sao Tome and Principe",
       "flag": "🇸🇹",
       "code": "ST",
-      "dial": "+239"
+      "dial": "+239",
     },
     {"name": "Saudi Arabia", "flag": "🇸🇦", "code": "SA", "dial": "+966"},
     {"name": "Senegal", "flag": "🇸🇳", "code": "SN", "dial": "+221"},
@@ -330,7 +355,7 @@ class CountryDatabase {
       "name": "South Georgia and the South Sandwich Islands",
       "flag": "🇬🇸",
       "code": "GS",
-      "dial": "+500"
+      "dial": "+500",
     },
     {"name": "Spain", "flag": "🇪🇸", "code": "ES", "dial": "+34"},
     {"name": "Sri Lanka", "flag": "🇱🇰", "code": "LK", "dial": "+94"},
@@ -340,7 +365,7 @@ class CountryDatabase {
       "name": "Svalbard and Jan Mayen",
       "flag": "🇸🇯",
       "code": "SJ",
-      "dial": "+47"
+      "dial": "+47",
     },
     {"name": "Eswatini", "flag": "🇸🇿", "code": "SZ", "dial": "+268"},
     {"name": "Sweden", "flag": "🇸🇪", "code": "SE", "dial": "+46"},
@@ -349,7 +374,7 @@ class CountryDatabase {
       "name": "Syrian Arab Republic",
       "flag": "🇸🇾",
       "code": "SY",
-      "dial": "+963"
+      "dial": "+963",
     },
     {"name": "Taiwan", "flag": "🇹🇼", "code": "TW", "dial": "+886"},
     {"name": "Tajikistan", "flag": "🇹🇯", "code": "TJ", "dial": "+992"},
@@ -357,7 +382,7 @@ class CountryDatabase {
       "name": "Tanzania, United Republic of Tanzania",
       "flag": "🇹🇿",
       "code": "TZ",
-      "dial": "+255"
+      "dial": "+255",
     },
     {"name": "Thailand", "flag": "🇹🇭", "code": "TH", "dial": "+66"},
     {"name": "Timor-Leste", "flag": "🇹🇱", "code": "TL", "dial": "+670"},
@@ -368,7 +393,7 @@ class CountryDatabase {
       "name": "Trinidad and Tobago",
       "flag": "🇹🇹",
       "code": "TT",
-      "dial": "+1868"
+      "dial": "+1868",
     },
     {"name": "Tunisia", "flag": "🇹🇳", "code": "TN", "dial": "+216"},
     {"name": "Turkey", "flag": "🇹🇷", "code": "TR", "dial": "+90"},
@@ -377,7 +402,7 @@ class CountryDatabase {
       "name": "Turks and Caicos Islands",
       "flag": "🇹🇨",
       "code": "TC",
-      "dial": "+1649"
+      "dial": "+1649",
     },
     {"name": "Tuvalu", "flag": "🇹🇻", "code": "TV", "dial": "+688"},
     {"name": "Uganda", "flag": "🇺🇬", "code": "UG", "dial": "+256"},
@@ -386,7 +411,7 @@ class CountryDatabase {
       "name": "United Arab Emirates",
       "flag": "🇦🇪",
       "code": "AE",
-      "dial": "+971"
+      "dial": "+971",
     },
     {"name": "United Kingdom", "flag": "🇬🇧", "code": "GB", "dial": "+44"},
     {"name": "United States", "flag": "🇺🇸", "code": "US", "dial": "+1"},
@@ -397,24 +422,24 @@ class CountryDatabase {
       "name": "Venezuela, Bolivarian Republic of Venezuela",
       "flag": "🇻🇪",
       "code": "VE",
-      "dial": "+58"
+      "dial": "+58",
     },
     {"name": "Vietnam", "flag": "🇻🇳", "code": "VN", "dial": "+84"},
     {
       "name": "Virgin Islands, British",
       "flag": "🇻🇬",
       "code": "VG",
-      "dial": "+1284"
+      "dial": "+1284",
     },
     {
       "name": "Virgin Islands, U.S.",
       "flag": "🇻🇮",
       "code": "VI",
-      "dial": "+1340"
+      "dial": "+1340",
     },
     {"name": "Wallis and Futuna", "flag": "🇼🇫", "code": "WF", "dial": "+681"},
     {"name": "Yemen", "flag": "🇾🇪", "code": "YE", "dial": "+967"},
     {"name": "Zambia", "flag": "🇿🇲", "code": "ZM", "dial": "+260"},
-    {"name": "Zimbabwe", "flag": "🇿🇼", "code": "ZW", "dial": "+263"}
+    {"name": "Zimbabwe", "flag": "🇿🇼", "code": "ZW", "dial": "+263"},
   ];
 }
