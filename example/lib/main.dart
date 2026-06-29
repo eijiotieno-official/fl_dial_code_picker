@@ -32,18 +32,16 @@ class _HomeState extends State<Home> {
       anchorKey:
           _buttonKey, // This will enable positioned popup on larger screens
       title: "Choose Country",
-      titleStyle: const TextStyle(
-        fontSize: 18,
-        fontWeight: FontWeight.w600,
-        color: Colors.blue,
-      ),
-      accentColor: Colors.blue,
+      accentColor: Colors.green,
       searchPlaceholder: "Search countries...",
       initialCountry: _selectedCountry, // Pre-select current country
+      showSearchField: true,
     );
-    setState(() {
-      _selectedCountry = country;
-    });
+    if (country != null) {
+      setState(() {
+        _selectedCountry = country;
+      });
+    }
   }
 
   void _showBottomSheetPicker() async {
@@ -53,7 +51,6 @@ class _HomeState extends State<Home> {
       backgroundColor: Colors.grey[50],
       title: "Select Country Code",
       borderRadius: BorderRadius.circular(20),
-      padding: const EdgeInsets.all(20),
       initialCountry: _selectedCountry, // Pre-select current country
     );
     setState(() {
@@ -114,7 +111,6 @@ class _HomeState extends State<Home> {
       backgroundColor: Colors.white,
       maxWidth: 450,
       borderRadius: BorderRadius.circular(25),
-      padding: const EdgeInsets.all(24),
       leadingWidget: const Icon(Icons.public, color: Colors.green, size: 24),
       trailingWidget: Container(
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),

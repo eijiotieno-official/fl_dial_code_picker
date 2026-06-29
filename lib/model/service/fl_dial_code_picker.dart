@@ -67,7 +67,6 @@ class FlDialCodePicker {
     double? maxHeight,
     BorderRadius? borderRadius,
     List<BoxShadow>? boxShadow,
-    EdgeInsets? padding,
     bool showSearchField = true,
     Widget? leadingWidget,
     Widget? trailingWidget,
@@ -103,7 +102,7 @@ class FlDialCodePicker {
               maxHeight: maxHeight,
               borderRadius: borderRadius,
               boxShadow: boxShadow,
-              padding: padding,
+           
               showSearchField: showSearchField,
               leadingWidget: leadingWidget,
               trailingWidget: trailingWidget,
@@ -117,7 +116,7 @@ class FlDialCodePicker {
     }
 
     return actualPickerType == PickerType.bottomSheet
-        ? await showModalBottomSheet<Country>(
+        ? await showModalBottomSheet<Country?>(
             isScrollControlled: true,
             showDragHandle: true,
             backgroundColor: backgroundColor ?? Colors.white,
@@ -136,7 +135,6 @@ class FlDialCodePicker {
               maxHeight: maxHeight,
               borderRadius: borderRadius,
               boxShadow: boxShadow,
-              padding: padding,
               showSearchField: showSearchField,
               leadingWidget: leadingWidget,
               trailingWidget: trailingWidget,
@@ -144,10 +142,9 @@ class FlDialCodePicker {
               initialCountry: initialCountry,
             ),
           )
-        : await showDialog<Country>(
+        : await showDialog<Country?>(
             context: context,
             builder: (context) => Dialog(
-              backgroundColor: Colors.transparent,
               child: PickerView(
                 pickerType: actualPickerType,
                 accentColor: accentColor,
@@ -162,7 +159,6 @@ class FlDialCodePicker {
                 maxHeight: maxHeight,
                 borderRadius: borderRadius,
                 boxShadow: boxShadow,
-                padding: padding,
                 showSearchField: showSearchField,
                 leadingWidget: leadingWidget,
                 trailingWidget: trailingWidget,
