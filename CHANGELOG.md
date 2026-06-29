@@ -31,3 +31,7 @@
 * Added search functionality for countries
 * Added customizable styling options
 * Added comprehensive documentation and examples
+
+## 0.0.3
+
+* Added a fix that caused the background to be transparent
